@@ -1,4 +1,4 @@
-console.log('yes');
+
 
 /*
 echo "# gitgit" >> README.md
@@ -10,3 +10,5 @@ git remote add origin https://github.com/divyanshu4757/gitgit.git
 git push -u origin main
 
 */
+
+console.log('I dont love it anymore');
