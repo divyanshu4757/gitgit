@@ -50,3 +50,4 @@ const elements = document.getElementsByClassName('title');
 
 elements[0].style.fontWeight = 'bold';
 
+console.log("leom");
