@@ -107,6 +107,7 @@ for(let i=0;i<odd.length;i++){
 
 
 // traversing the dom
+/*
 
 var itemList = document.querySelector('#items');
 
@@ -209,3 +210,6 @@ var h2= document.querySelector('.list-group-item');
 
 
 itemList.insertBefore(newDiv , h2 )
+
+*/
+
