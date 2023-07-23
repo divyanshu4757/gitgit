@@ -25,20 +25,20 @@ console.log(document.forms[0]);
 
 
 
-const headerTitle = document.getElementById('header-title');
+// const headerTitle = document.getElementById('header-title');
 
-const header = document.getElementById('main-header');
+// const header = document.getElementById('main-header');
 
-console.log(headerTitle);
+// console.log(headerTitle);
 
-headerTitle.textContent = 'Lemon chus lo';
-headerTitle.innerText = 'AAlo kha lo';
+// headerTitle.textContent = 'Lemon chus lo';
+// headerTitle.innerText = 'AAlo kha lo';
 
-headerTitle.innerHTML = '<h3>CHaman</h3>'
+// headerTitle.innerHTML = '<h3>CHaman</h3>'
 
-console.log(headerTitle);
+// console.log(headerTitle);
 
-header.style.borderBottom = 'solid 3px black';
+// header.style.borderBottom = 'solid 3px black';
 /*
 var items = document.getElementsByClassName('list-group-item');
 
@@ -46,8 +46,35 @@ items.style.fontWeight = 'bold';
 
 */
 
-const elements = document.getElementsByClassName('title');
+// const elements = document.getElementsByClassName('title');
 
-elements[0].style.fontWeight = 'bold';
+// elements[0].style.fontWeight = 'bold';
 
-console.log("leom");
+// console.log("leom");
+
+
+
+
+// get element by tag name
+
+
+
+const ulElement = document.getElementsByTagName('ul');
+
+const liElement = document.createElement('li');
+
+liElement.textContent = "New Item";
+
+ulElement[0].appendChild(liElement);
+
+
+liElement.classList.add("lemon");
+
+console.log(liElement);
+
+const li = document.getElementsByTagName("li");
+
+li[4].style.backgroundColor  = "magenta";
+
+
+liElement.classList.add("list-group-item");
