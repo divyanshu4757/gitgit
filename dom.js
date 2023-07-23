@@ -84,13 +84,14 @@ liElement.classList.add("list-group-item");
 // query selector -> grabs the first one if not use all
 
 /*
+
 let second = document.querySelector('.list-group-item:nth-child(2)');
 
 second.style.backgroundColor = "green";
 
 let third = document.querySelector('.list-group-item:nth-child(3)');
 third.style.display = "none";
-*/
+
 
 let second = document.querySelectorAll('.list-group-item');
 second[1].style.color = "green";
@@ -101,42 +102,106 @@ for(let i=0;i<odd.length;i++){
     odd[i].style.backgroundColor = "green";
 }
 
+*/
 
 
-/*
- let header = document.querySelector('#main-header');
- header.style.borderBottom = "solid 10px black";
 
- var input = document.querySelector('input');
+// traversing the dom
 
- input.value ="hello world";
+var itemList = document.querySelector('#items');
 
+// parentNode
 
- var submit = document.querySelector('input[type="submit"]');
- submit.value = "jao";
-
- var item = document.querySelector('.list-group-item');
-
- item.style.color ='red';
-
- var lastitem = document.querySelector('.list-group-item:last-child');
- lastitem.style.color = "blue";
- 
-
- 
- var seconditem = document.querySelector('.list-group-item:nth-child(2)');
- seconditem.style.color = "green";
+console.log(itemList.parentNode);
+console.log(itemList.parentNode.parentNode);
+itemList.parentNode.parentNode.style.marginTop = '100px';
+console.log(itemList.parentNode.parentNode.parentNode);
 
 
- var titles = document.querySelectorAll('.title');
- console.log(titles);
+//parentElement - same as node
 
- titles[0].textContent = "kha lo";
 
- var odd  = document.querySelectorAll('li:nth-child(odd)');
+console.log(itemList.parentElement);
+console.log(itemList.parentElement.parentElement);
+itemList.parentElement.parentElement.style.marginLeft = '100px';
+console.log(itemList.parentElement.parentElement.parentElement);
 
- for(var i=0;i<odd.length;i++){
-    odd[i].style.backgroundColor = "yellow";
- }
 
- */
+
+//child nodes->pain in the ass -> use children
+
+//console.log(itemList.childNodes);
+
+
+console.log(itemList.children);
+
+itemList.children[0].style.backgroundColor = "black"
+
+// first  child
+console.log(itemList.firstChild);
+
+//first element child
+
+itemList.firstElementChild.textContent = "lemon";
+
+
+//last child
+
+console.log(itemList.lastChild);
+
+//last element child
+
+console.log(itemList.lastElementChild);
+
+
+// next sibling
+
+console.log(itemList.nextSibling);
+
+//next element sibling
+console.log(itemList.nextElementSibling);
+
+// previous sibling
+
+console.log(itemList.previousSibling);
+
+//previous element sibling
+
+console.log(itemList.previousElementSibling);
+
+itemList.previousElementSibling.textContent = "ja be";
+
+
+// create element
+
+var newDiv = document.createElement('div');
+console.log(newDiv);
+
+newDiv.className = 'hello';
+console.log(newDiv);
+
+newDiv.id = 'hello1';
+
+console.log(newDiv);
+//add attribute
+newDiv.setAttribute('title' , 'Hello div');
+
+console.log(newDiv);
+
+
+var newDivText = document.createTextNode('hello world');
+
+console.log(newDivText);
+
+// add text to div
+
+newDiv.appendChild(newDivText);
+console.log(newDiv);
+
+
+var container = document.querySelector('header .container');
+
+var h1 = document.querySelector('header h1');
+
+
+container.insertBefore(newDiv , h1)
